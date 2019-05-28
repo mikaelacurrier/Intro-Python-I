@@ -17,10 +17,14 @@ print(f1(1, 2))
 # YOUR CODE HERE
 
 def f2(*arg):
-    # if type(arg) == list:
-    sum = 0
-    for num in arg:
-        sum = sum + num
+    if len(arg) == 1:
+        sum = 0
+        for num in len(arg):
+            sum += num
+    else:   
+        sum = 0
+        for num in arg:
+            sum += num
     return sum
     # else:
     #     x = 0
