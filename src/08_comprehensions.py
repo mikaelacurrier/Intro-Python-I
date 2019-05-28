@@ -11,6 +11,8 @@ for more info regarding list comprehensions.
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
 y = []
+for x in range(5):
+    y.append(x + 1)
 
 print (y)
 
@@ -19,14 +21,16 @@ print (y)
 
 y = []
 
+for x in range(9):
+    y.append(x*x)
+
 print(y)
 
 # Write a list comprehension to produce the uppercase version of all the
 # elements in array a. Hint: "foo".upper() is "FOO".
 
 a = ["foo", "bar", "baz"]
-
-y = []
+y = [c.upper() for c in a]
 
 print(y)
 
@@ -36,6 +40,6 @@ print(y)
 x = input("Enter comma-separated numbers: ").split(',')
 
 # What do you need between the square brackets to make it work?
-y = []
+y = [n for n in x if int(n) % 2 == 0]
 
 print(y)
