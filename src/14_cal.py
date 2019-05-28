@@ -22,3 +22,29 @@ and does the following:
 import sys
 import calendar
 from datetime import datetime
+
+# create calendar, starting on Sundays
+c = calendar.TextCalendar(calendar.SUNDAY)
+
+# get user input
+user_input = input("Please input month and year (as integers): ").split(' ')
+
+today = datetime.today()
+year = today.year
+month = today.month
+
+def str():
+  if len(user_input) > 1:
+    global month
+    global year
+    month = int(user_input[0])
+    year = int(user_input[1])
+str()
+  
+print(c.formatmonth(year, month))
+
+
+
+
+
+
